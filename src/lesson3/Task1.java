@@ -12,7 +12,7 @@ public class Task1 {
         System.out.println(a[0]);
         System.out.println(a[1]);
 
-        for(int i = 2; i < 11; ++i) {
+        for(int i = 2; i < a.length; i++) {
             a[i] = a[i - 1] + a[i - 2];
             System.out.println(a[i]);
         }

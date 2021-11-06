@@ -10,16 +10,12 @@ public class Task3 {
             if (inA.hasNextInt() && inB.hasNextInt()) {
                 int a = inA.nextInt();
                 int b = inB.nextInt();
-
                 while(a < b - 1) {
-                    ++a;
+                    a++;
                     System.out.println(a);
                 }
-
-                return;
-            }
-
-            System.out.println("ошибка");
+                break;
+            } else System.out.println("ошибка");
         }
     }
 }

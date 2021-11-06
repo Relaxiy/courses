@@ -43,11 +43,9 @@ public class Task2 {
                             System.err.println("Ошибка");
                         }
                 }
-
-                return;
+                break;
             }
-
-            System.out.println("не верный ввод");
+            else System.out.println("не верный ввод");
         }
     }
 }

@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Task14 {
     public static double func(double a, double b, double c) {
-        return (a - 3.0D) * b / 2.0D + c;
+        return (a - 3) * b / 2 + c;
     }
 
     public static void main(String[] args) {
@@ -17,10 +17,8 @@ public class Task14 {
                 double b = inB.nextDouble();
                 double c = inC.nextDouble();
                 System.out.println(func(a, b, c));
-                return;
-            }
-
-            System.out.println("wrong");
+                break;
+            } else System.out.println("wrong");
         }
     }
 }

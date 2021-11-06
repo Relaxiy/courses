@@ -10,9 +10,6 @@ public class Task12 {
             int val1 = inV1.nextInt();
             int val2 = inV2.nextInt();
             System.out.println(val1 + val2);
-        } else {
-            System.out.println("wrong");
-        }
-
+        } else System.out.println("wrong");
     }
 }

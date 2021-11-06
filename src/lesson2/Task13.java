@@ -8,9 +8,6 @@ public class Task13 {
         if (in.hasNextLine()) {
             String name = in.nextLine();
             System.out.println(name);
-        } else {
-            System.out.println("wrong");
-        }
-
+        } else System.out.println("wrong");
     }
 }

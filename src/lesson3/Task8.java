@@ -8,7 +8,7 @@ public class Task8 {
         int j;
         for(i = 0; i < mass.length; i++) {
             for(j = 0; j < mass[i].length; j++) {
-                mass[i][j] = (int)(Math.random() * 11.0D) - 5;
+                mass[i][j] = (int)(Math.random() * 11) - 5;
                 System.out.print(mass[i][j] + " ");
             }
 

@@ -9,20 +9,18 @@ public class Task10 {
         int k = 0;
         int i;
         for(i = 0; i < mass.length; i++) {
-            mass[i] = (int)(Math.random() * 11.0D) + 1;
-            System.out.print(mass[i] + " ");
+            mass[i] = (int)(Math.random() * 11) + 1;
         }
-        System.out.println();
+        System.out.println(Arrays.toString(mass));
         Arrays.sort(mass);
-        for(i = 0; i < mass.length; i++) {
-            for(int j = 0; j < mass.length - 1; j++) {
+        for(i = 0; i < mass.length-1; i++) {
+            for(int j = i+1; j < mass.length; j++) {
                 if (mass[i] == mass[j] && mass[i] != arr[k]) {
                     arr[k] = mass[j];
+                    System.out.print(arr[k] + " ");
                     k++;
                 }
             }
         }
-        System.out.println(Arrays.toString(arr));
-
     }
 }

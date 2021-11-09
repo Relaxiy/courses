@@ -10,20 +10,15 @@ public class Task7 {
                 mass[i][j] = (int)(Math.random() * 11) - 5;
                 System.out.print(mass[i][j] + " ");
             }
-
             System.out.println();
         }
-
         int minValue = mass[0][0];
-
         for(i = 0; i < mass.length; i++) {
             for(j = 0; j < mass[i].length; j++) {
                 if (mass[i][j] < minValue) {
                     minValue = mass[i][j];
                 }
             }
-
-            System.out.println();
         }
 
         System.out.println(minValue);

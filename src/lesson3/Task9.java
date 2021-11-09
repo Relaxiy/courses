@@ -9,11 +9,11 @@ public class Task9 {
         int value = rand.nextInt(4);
         Scanner in = new Scanner(System.in);
 
-        int YourVal;
+        int yourVal;
         do {
-            YourVal = in.nextInt();
-        } while(YourVal != value);
+            yourVal = in.nextInt();
+        } while(yourVal != value);
 
-        System.out.println("Верно: " + YourVal);
+        System.out.println("Верно: " + yourVal);
     }
 }

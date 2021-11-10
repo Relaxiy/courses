@@ -5,37 +5,19 @@ import java.util.Scanner;
 
 public class Task11 {
     public static void main(String[] args) {
-        int[] mass = new int[5];
-        int[] newArray = null;
+        int[] arr = new int[5];
+        int[] newArray = new int[4];
         int index;
-        for (index = 0; index < mass.length; index++) {
-            mass[index] = (int) (Math.random() * 11) + 1;
-            System.out.print(mass[index] + " ");
+        for (index = 0; index < arr.length; index++) {
+            arr[index] = (int) (Math.random() * 11) + 1;
+            System.out.print(arr[index] + " ");
         }
-        int indexValue = 0;
         Scanner in = new Scanner(System.in);
-        index = in.nextInt();
-        if (index <= mass.length - 1) {
-            for (int i = 0; i < mass.length; i++) {
-                if (i == index) {
-                    newArray = new int[mass.length - 1];
-                    indexValue = mass[i];
-                    int j;
-                    for (j = 0; j < i; ++j) {
-                        newArray[j] = mass[j];
-                    }
-                    j = i;
-                    while (true) {
-                        if (j >= mass.length - 1) {
-                            break;
-                        }
-                        newArray[j] = mass[j + 1];
-                        j++;
-                    }
-                }
-            }
-            System.out.println("Value: " + indexValue + "\nArray: " + Arrays.toString(newArray));
-        } else System.out.println("error");
+        int value = in.nextInt();
+        value++;
+        System.arraycopy(arr, 0, newArray, 0, value-1);
+        System.arraycopy(arr, value, newArray, value - 1, arr.length-value);
+        System.out.println(Arrays.toString(newArray));
     }
 }
 

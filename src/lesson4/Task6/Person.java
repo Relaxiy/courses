@@ -44,7 +44,7 @@ public abstract class Person {
     }
 
     public static Person worksLonger(Person[] person){
-        Person[] lectors = new Lector[person.length];
+        Lector[] lectors = new Lector[person.length];
         int index = 0;
         for (int i = 0; i < person.length; i++) {
             if (person[i] instanceof Lector) {
@@ -52,15 +52,13 @@ public abstract class Person {
                 index++;
             }
         }
-        index = 0;
-        int max = ((Lector)lectors[0]).getWorkingYears();
+        int max = lectors[0].getWorkingYears();
         int indexLector = 0;
-        while (lectors[index] != null) {
-            if (max < ((Lector) lectors[index]).getWorkingYears()) {
-                max = ((Lector) lectors[index]).getWorkingYears();
-                indexLector = index;
+        for (int i = 0; i < index; i++){
+            if (max < lectors[i].getWorkingYears()) {
+                max = lectors[i].getWorkingYears();
+                indexLector = i;
             }
-            index++;
         }
         return lectors[indexLector];
     }

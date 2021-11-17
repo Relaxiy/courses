@@ -23,15 +23,17 @@ public class University {
     }
 
     public static void oldestMan(Person[] person){
-        int index = 0;
-        int max = person[0].getAge();
-        for (int i = 0; i < person.length; i++){
-            if (max < person[i].getAge()) {
-                index = i;
-                max = person[i].getAge();
+        if (person[0] != null) {
+            int index = 0;
+            int max = person[0].getAge();
+            for (int i = 0; i < person.length; i++) {
+                if (max < person[i].getAge()) {
+                    index = i;
+                    max = person[i].getAge();
+                }
             }
+            System.out.println(person[index]);
         }
-        System.out.println(person[index]);
     }
 
     public static Person[] returnStudents(Person[] person){
@@ -55,15 +57,13 @@ public class University {
                 index++;
             }
         }
-        int max = lectors[0].getWorkingYears();
-        int indexLector = 0;
+        Lector max = lectors[0];
         for (int i = 0; i < index; i++){
-            if (max < lectors[i].getWorkingYears()) {
-                max = lectors[i].getWorkingYears();
-                indexLector = i;
+            if (max.getWorkingYears() < lectors[i].getWorkingYears()) {
+                max = lectors[i];
             }
         }
-        return lectors[indexLector];
+        return max;
     }
     public static void main(String[] args) {
         University university = new University();

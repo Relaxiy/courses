@@ -14,7 +14,7 @@ public class Numbers {
         this.numbers = numbers;
     }
 
-    private int findMax(){
+    public int findMax(){
         int max = this.numbers[0];
         for (int i = 0; i < this.numbers.length; i++){
             if(max < this.numbers[i]) max = this.numbers[i];
@@ -22,7 +22,7 @@ public class Numbers {
         return max;
     }
 
-    private int findMin(){
+    public int findMin(){
         int min = this.numbers[0];
         for (int i = 0; i < this.numbers.length; i++){
             if(min > this.numbers[i]) min = this.numbers[i];
@@ -30,7 +30,7 @@ public class Numbers {
         return min;
     }
 
-    private int findSum(){
+    public int findSum(){
         int sum = 0;
         for (int i = 0; i < this.numbers.length; i++){
             sum += this.numbers[i];

@@ -1,9 +1,9 @@
 package lesson8;
 
 public enum TypeCar {
-    LUXURY("Люкс"),
-    BUSINESS("Бизнес"),
-    SIMPLE("Стандарт");
+    LUXURY("luxury"),
+    BUSINESS("business"),
+    SIMPLE("Standart");
 
     private String string;
 

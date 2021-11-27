@@ -6,9 +6,9 @@
 package lesson5.Task2;
 
 public enum Role {
-    DIRECTOR("Директор"),
-    EMPLOYEE("Рядовой сотрудник"),
-    HR("Менеджер отдела кадров");
+    DIRECTOR("Director"),
+    EMPLOYEE("ordinary employee"),
+    HR("HR manager");
 
     private String role;
 

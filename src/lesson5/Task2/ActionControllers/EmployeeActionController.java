@@ -16,17 +16,17 @@ public class EmployeeActionController implements ActionController {
 
     public String getUserInformationByEmail(String email) throws UserNotFoundException {
         User user = store.getUser(email);
-        if (user != null && user.getRole().equals("Рядовой сотрудник")) {
+        if (user != null && user.getRole().equals("Ordinary employee")) {
             return user.toString();
         }
-        if (user != null || !user.getRole().equals("Директор") && !user.getRole().equals("Менеджер отдела кадров")) {
-            return "Недостаточно прав";
+        if (user != null || !user.getRole().equals("Director") && !user.getRole().equals("HR manager")) {
+            return "Not enough rights";
         }
         throw new UserNotFoundException(email);
     }
 
     public void changeSalaryByEmail(String email, int salary) throws UserNotFoundException {
-        System.out.println("Недостаточно прав");
+        System.out.println("Not enough rights");
     }
 
     public Role getRole() {

@@ -25,13 +25,13 @@ public class HRActionController implements ActionController {
 
     public void changeSalaryByEmail(String email, int salary) throws UserNotFoundException {
         User user = store.getUser(email);
-        if (user != null && user.getRole().equals("Рядовой сотрудник")) {
+        if (user != null && user.getRole().equals("Ordinary employee")) {
             user.setSalary(salary);
             System.out.println("salary changed. New salary = " + user.getSalary());
             return;
         }
-        if (user != null && (user.getRole().equals("Директор") || user.getRole().equals("Менеджер отдела кадров"))) {
-            System.out.println("Недостаточно прав");
+        if (user != null && (user.getRole().equals("Director") || user.getRole().equals("HR manager"))) {
+            System.out.println("Not enough rights");
             return;
         }
         throw new UserNotFoundException(email);

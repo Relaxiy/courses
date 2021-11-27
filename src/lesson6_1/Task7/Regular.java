@@ -13,7 +13,7 @@ public class Regular {
     public void check() {
         try {
             String[] strings = str.toUpperCase().split(" ");
-            Pattern pattern = Pattern.compile(Commands.valueOf(strings[0]) + "\s.[A-z]\s." + Color.valueOf(strings[2]));
+            Pattern pattern = Pattern.compile(Commands.valueOf(strings[0]) + "(\s.[A-z].\s)" + Color.valueOf(strings[2]));
             Matcher matcher = pattern.matcher(str.toUpperCase());
             System.out.println(matcher.find());
         } catch (IllegalArgumentException e) {

@@ -4,7 +4,7 @@ import lesson5.Task2.Role;
 import lesson5.Task2.Exceptions.UserNotFoundException;
 
 public interface ActionController {
-    String getUserInformationByEmail(String var1) throws UserNotFoundException;
-    void changeSalaryByEmail(String var1, int var2) throws UserNotFoundException;
+    String getUserInformationByEmail(String email) throws UserNotFoundException;
+    void changeSalaryByEmail(String email, int salary) throws UserNotFoundException;
     Role getRole();
 }

@@ -12,7 +12,7 @@ public class Task3 {
             String s = this.str.replace(substr, "");
             return s;
         }
-        return "Не содержится в строке";
+        return "There is no in the line";
     }
 
     public static void main(String[] args) {

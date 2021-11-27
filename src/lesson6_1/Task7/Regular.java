@@ -17,7 +17,7 @@ public class Regular {
             Matcher matcher = pattern.matcher(str.toUpperCase());
             System.out.println(matcher.find());
         } catch (IllegalArgumentException e) {
-            System.out.println("Неверный формат");
+            System.out.println("Wrong format");
         }
 
     }

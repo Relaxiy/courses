@@ -12,10 +12,10 @@ public class Arr {
             int index = in.nextInt();
             System.out.println(array[index]);
         }catch (ArrayIndexOutOfBoundsException e){
-            System.out.println("Выход за пределы массива, по умолчанию выводится первый элемент: "
+            System.out.println("Out of bounds of array, by default the first element is displayed: "
                     + array[0]);
         }catch (InputMismatchException e){
-            System.out.println("Введена строка, по умолчанию выводится первый элемент: "
+            System.out.println("String entered, by default the first item is output: "
                     + array[0]);
         }
     }

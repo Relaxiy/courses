@@ -18,7 +18,7 @@ public class Main {
         try {
             System.out.println(returnEnum(str));
         } catch (RuntimeException e) {
-            System.out.println("Такой поры года не существует!!!");
+            System.out.println("This season doesn't exist");
         }
 
     }

@@ -9,7 +9,8 @@ public class Money {
     }
 
     public void result() {
-        EmployeeType[] employeeTypes = new EmployeeType[]{EmployeeType.DIRECTOR, EmployeeType.ENGINEER, EmployeeType.DEPARTMENT_HEAD, EmployeeType.TRAINEE};
+        EmployeeType[] employeeTypes;
+        employeeTypes = EmployeeType.values();
         for(int i = 0; i < employeeTypes.length; i++) {
             System.out.println(employeeTypes[i].getSalary() * this.days);
         }

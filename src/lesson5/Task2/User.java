@@ -27,8 +27,8 @@ public class User {
         return this.email;
     }
 
-    public String getRole() {
-        return this.role.getRole();
+    public Role getRole() {
+        return this.role;
     }
 
     public int getSalary() {

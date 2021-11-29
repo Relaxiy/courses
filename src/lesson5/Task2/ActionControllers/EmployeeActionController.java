@@ -16,10 +16,10 @@ public class EmployeeActionController implements ActionController {
 
     public String getUserInformationByEmail(String email) throws UserNotFoundException {
         User user = store.getUser(email);
-        if (user != null && user.getRole().equals("Ordinary employee")) {
+        if (user != null && user.getRole().equals(Role.EMPLOYEE)) {
             return user.toString();
         }
-        if (user != null || !user.getRole().equals("Director") && !user.getRole().equals("HR manager")) {
+        if (user != null || !user.getRole().equals(Role.DIRECTOR) && !user.getRole().equals(Role.HR)) {
             return "Not enough rights";
         }
         throw new UserNotFoundException(email);
